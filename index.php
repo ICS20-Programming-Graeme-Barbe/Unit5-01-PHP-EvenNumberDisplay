@@ -35,23 +35,21 @@
 		<!-- Variables and Calculations -->
 		<?php  
 			if(isset($_POST['submit'])) {  
-				$userAge = $_POST['age'];   
-				$day = $_POST['day'];
+				$max = $_POST['max'];   
+				$counter = $_POST['min'];
+				$numbers = ""; 
 				
-				// If statement for user cost of getting into the museum
-				if (($userAge == "") or ($day == "")) {
-					//Nothing was inputted
-					echo "<br>You need to input your age or select the day";
-				} else if ($userAge <= 5 or $userAge >= 95) {
-					//User gets in for free 
-					echo "<br>Congratulations, you get in for free!";
-				} else if (($userAge >= 12 and $userAge <= 21) or ($day == "Tuesday" or $day == "Thursday")) {
-					//User gets student pricing 
-					echo "<br>Congratulations, you get student pricing";
+				if ($max >= $counter) {
+					//while loop for counter
+					while ($counter <= $max) {
+						$numbers = $numbers . $counter . '<br>';
+						$counter = $counter++;
+					}
 				} else {
-					//User pays full price
-					echo "<br>You need to pay full price.";
-				} 
+					echo 'Please make sure your min is smaller than your max';
+				}
+
+				echo $numbers;
 			}
 		?>
 	</body>
