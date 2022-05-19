@@ -1,0 +1,19 @@
+/* Created by: Graeme Barbe
+* Created on: May 19 2022
+* This CSS file defines the style for index.php
+*/
+
+/* body background */
+body {
+	background-color: #537895;
+background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+}
+
+/* Color changes */
+h1 {
+	color: rgb(255, 255, 255);
+}
+
+p{
+	color: rgb(255, 255, 255);
+}

@@ -35,21 +35,21 @@
 		<!-- Variables and Calculations -->
 		<?php  
 			if(isset($_POST['submit'])) {  
-				$max = $_POST['max'];   
-				$counter = $_POST['min'];
+				$max = intval($_POST['max']);   
+				$counter = intval($_POST['min']);
 				$numbers = ""; 
 				
 				if ($max >= $counter) {
 					//while loop for counter
 					while ($counter <= $max) {
 						$numbers = $numbers . $counter . '<br>';
-						$counter = $counter++;
+						$counter = $counter + 1;
 					}
 				} else {
-					echo 'Please make sure your min is smaller than your max';
+					echo '<p>Please make sure your min is smaller than your max</p>';
 				}
 
-				echo $numbers;
+				echo "<p>". $numbers;
 			}
 		?>
 	</body>
